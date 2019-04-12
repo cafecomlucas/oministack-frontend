@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import logo from "../../assets/logo.svg";
-import "./styles.css";
+
+import { Container, SubmitButton } from "./styles";
 
 import api from "../../services/api";
 
@@ -22,13 +23,15 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div id="main-container">
+      <Container>
         <form onSubmit={this.handleSubmit} action="">
           <img src={logo} alt="" />
           <input onChange={this.handleInputChange} placeholder="Criar um box" />
-          <button type="submit">Criar</button>
+          <SubmitButton color="#111" type="submit">
+            Criar
+          </SubmitButton>
         </form>
-      </div>
+      </Container>
     );
   }
 }
